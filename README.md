@@ -1,7 +1,12 @@
 # Shape_smoothing
 
 ## Introduction
-This code makes use of Chaikin's corner cutting algorithm but also attempts to ensure that important details are maintained. The overall goal is that the result is a polished cleaner version of the input structure.
+A Python implementation of **Chaikin's corner-cutting algorithm** with extra steps to **preserve important features** (sharp corners, unique edges) in hand-drawn or noisy shapes.  
+
+Unlike naive smoothing, this approach avoids losing striking details by combining:
+- Path simplification 
+- Feature detection (Ramer–Douglas–Peucker)
+- Partitioned Chaikin smoothing
 
 ## The Logic
 Let's take as input a hand drawn image of a triangle: it's rough, noisy, contains a lot of imperfect strokes.
@@ -68,5 +73,12 @@ Other examples are like this hand-drawn circle Image A is going directly through
 The result is a smoother shape given the same number of iterations while also making sure that the shape doesn't lose much of it's striking features if any at all.
 
 
+## Drawbacks
 
+Given my algorithm, there are a couple of issues that will significantly improve results should they be fixed:
+- My implementation of vertext detection is too generous and ends up resulting in less significant corner cuts making Chaikin's algorithm less effective
+- RDP, while it works, doesn't highlight *all* the important features. For example, the bottom right corner of the triangle image has 2 corners, but RDP only detects one.
+- The parititioning in Step 3 can lead to awkward looking corners that stand out. For example, Image B shown above, theres a sharp corner in the top right of the circle. The positioning of this corner is not conicidental; it's the location of one of the pillars.
+
+That sums it up for everything I've noticed to be somewhat faulty. After resolving the drawbacks I also plan on cleaning up the code so it's easier to follow. This means creating python files for each step and using a main.py so I don't end up with an over lengthy code.
 
