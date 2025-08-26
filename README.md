@@ -53,16 +53,19 @@ The grey is the original contour while black is the output image. Notice how the
 
 Other examples are like this hand-drawn circle Image A is going directly through Chaikin corner cutting, and image B is going through the 3-step process:-
 
+***Original Image:***
+
+<img width="433" height="346" alt="circle_border" src="https://github.com/user-attachments/assets/54c99d5f-6031-48e3-a0b1-4cb0ffabe1de" />
+
 **Image A:**
 
-<img width="433" height="346" alt="Before_After2" src="https://github.com/user-attachments/assets/48d8e763-517c-446f-815a-4e07f9737be9" />
+<img width="433" height="346" alt="Before_After2" src="https://github.com/user-attachments/assets/9286d6f3-1b2f-47ab-ac7e-020764832abc" />
 
-**Image B:***
+**Image B:**
 
-<img width="433" height="346" alt="Before_After" src="https://github.com/user-attachments/assets/6d33efa3-9860-4048-a60d-042a90fd4958" />
+<img width="433" height="346" alt="Step_3" src="https://github.com/user-attachments/assets/b53ee72d-3abf-4f0a-a18c-fbe4cde1442a" />
 
 The result is a smoother shape given the same number of iterations while also making sure that the shape doesn't lose much of it's striking features if any at all.
-
 
 
 
